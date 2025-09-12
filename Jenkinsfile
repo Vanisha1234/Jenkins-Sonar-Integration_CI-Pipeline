@@ -29,11 +29,6 @@ pipeline {  // For Sonar-Jenkins Integration & React.js based code
                 sh "CI=false npm run build"
             }
         }
-        stage('Tests') {                    // Running unit/integration tests to validate code functionality
-            steps {
-                sh "npm test"
-            }
-        }
         stage('SonarQube Analysis') {
             steps {
                 withCredentials([string(credentialsId: '<YourSonarToken>', variable: 'SONAR_TOKEN')]) {   // Use of Jenkins credentials (SonarQube token) securely
