@@ -1,4 +1,4 @@
-# JENKINS - SONARQUBE INTEGRATION THROUGH CI PIPELINE
+<h1 align="center">🚀 Jenkins - SonarQube Integration via Jenkins CI Pipeline</h1>
 
 ## 📑 Table of Contents
 - [Project Overview](#project-overview)
@@ -13,9 +13,10 @@
   - [CI Pipeline Creation](#creation-of-ci-pipeline-step-by-step)
   - [GitHub & Jenkins Integration](#integration-of-git-hub-with-jenkins-step-by-step)
   - [SonarQube Integration](#integration-of-sonarqube-with-jenkins-ci-pipeline-step-by-step)
+- [Results](#results)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# [PROJECT OVERVIEW]
+<h1 align="center">📖 Project Overview</h1>
 > This set-up was developed from scratch for my organization to eliminate the challenges of time-consuming manual testing and overlooked issues by automating code testing and analysis, ensuring accuracy and timely results.
 
 # Purpose:
@@ -41,29 +42,52 @@
 4. Integration of Jenkins and SonarQube
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# [PROJECT SET_UP]
+<h1 align="center">🛠️ Project Setup</h1>
 
 # Setting up Docker On Ubuntu Virtual Machine (Step-By-Step)
 > Ubuntu Version : Ubuntu 24.04.3 LTS \
 > Commands used:
-  1. sudo apt-get update
-  2. sudo apt install docker.io
-  3. sudo systemctl enable docker
-  4. sudo systemctl status docker
-  > # Docker service is running!    
+```bash
+   sudo apt-get update
+```
+```bash
+   sudo apt install docker.io
+```
+```bash
+   sudo systemctl enable docker
+```
+```bash
+   sudo systemctl status docker
+```
+  > # Docker service is running!
+
   <img width="961" height="234" alt="DockerStatus" src="https://github.com/user-attachments/assets/e6066f81-5c70-43d0-9404-408e909e8605" />
 
 # Setting up Jenkins through Docker Container (Step-By-Step)
-> Jenkins image used via Docker Hub : https://hub.docker.com/r/jenkins/jenkins
+> Jenkins image used via Docker Hub :
+```bash
+https://hub.docker.com/r/jenkins/jenkins
+```
 > Commands used:
-  1. mkdir /var/jenkins_home
-  2. chmod 777 /var/jenkins_home
-  3. sudo docker run -d --name jenkins -p 8090:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home jenkins/jenkins:lts
-  4. sudo docker logs jenkins
+```bash
+   mkdir /var/jenkins_home
+```
+```bash
+   chmod 777 /var/jenkins_home
+```
+```bash
+   sudo docker run -d --name jenkins -p 8090:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+```
+```bash
+   sudo docker logs jenkins
      > This command lists the temporary password only once to unlock Jenkins
+```
   <img width="1278" height="668" alt="setup-jenkins-02-copying-initial-admin-password" src="https://github.com/user-attachments/assets/a7f55ee9-713f-4404-91fd-6e4ed0d0e567" />
 
-  5. Browse Jenkins using the following URL : http://<your-jenkins-server>:8090/
+  5. Browse Jenkins using the following URL :
+```bash
+ http://<your-jenkins-server>:8090/
+```
      
   <img width="1598" height="1146" alt="UnlockJenkins" src="https://github.com/user-attachments/assets/483b26f8-2302-4356-bc07-94050f1bdb72" />
 
@@ -73,27 +97,50 @@
   <img width="885" height="456" alt="manage-jenkins" src="https://github.com/user-attachments/assets/951feb15-70ea-45fc-a365-36481c74e369" />
 
 # Setting up SonarQube & PostgreSQL through Docker Compose (Step-By-Step)
-> SonarQube image used via Docker Hub : https://hub.docker.com/_/sonarqube \
-> Postgres image used via Docker Hub : https://hub.docker.com/_/postgres \
+> SonarQube image used via Docker Hub :
+```bash
+https://hub.docker.com/_/sonarqube
+```
+> Postgres image used via Docker Hub :
+```bash
+https://hub.docker.com/_/postgres
+```
   To install Docker-Compose commands used:
+```bash
  1. sudo apt update
+```
+```bash
  2. mkdir -p ~/.docker/cli-plugins/
+```
+```bash
  3. sudo curl -SL https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64 \
     -o ~/.docker/cli-plugins/docker-compose
+```
+```bash
  3. sudo chmod +x ~/.docker/cli-plugins/docker-compose
- 4. Created a docker-compose file - vim docker-compose.yml \
+```
+```bash
+ 4. Created a docker-compose file - vim docker-compose.yml
+```
     *Please find the docker compose file used here in the Repository*
+```bash
  5. docker compose up -d 
-
+```
    <img width="1205" height="140" alt="Docker-compose" src="https://github.com/user-attachments/assets/ec810a86-5dcb-4081-abe2-e07451abc8a4" />
 
 
- 7. URL to access SonarQube Service : http://<your-sonarqube-server>:9001
+ 7. URL to access SonarQube Service :
+```bash
+ http://<your-sonarqube-server>:9001
+```
  > # SonarQube is Running!
 
    <img width="1338" height="730" alt="image" src="https://github.com/user-attachments/assets/ad5f4dbe-4aff-4242-8b1f-16112b2e17f5" />
 
- 8. Used default username & password to login - admin
+ 8. Used default username & password to login -
+```bash
+admin
+```
 
 # Integration of Git-hub with Jenkins (Step-By-Step)
 STEP 1: Generation of personal access token on Github
@@ -154,6 +201,12 @@ STEP 4: Configurion of SonarQube with Jenkins Pipeline Script \
 > SonarQube is displaying results!
 
 <img width="795" height="214" alt="SonarQube" src="https://github.com/user-attachments/assets/fbcffe6d-75b0-44d9-9784-34583f314589" />
+
+# Results
+🚀 Successfully set up Docker, Jenkins, and SonarQube \
+🔗 Integrated GitHub with Jenkins for seamless code checkout \
+⚙️ Implemented a CI pipeline in Jenkins to automate build and analysis \
+🛡️ Integrated SonarQube with Jenkins for automated code quality, reliability, and static analysis checks
 
 
 
