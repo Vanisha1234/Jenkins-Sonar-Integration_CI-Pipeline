@@ -126,8 +126,8 @@ https://hub.docker.com/_/postgres
 ```
 ```bash
  4. Created a docker-compose file - vim docker-compose.yml
+    > Please find the docker compose file used here in the Repository
 ```
-    *Please find the docker compose file used here in the Repository*
 ```bash
  5. docker compose up -d 
 ```
