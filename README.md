@@ -56,7 +56,21 @@
 
 # Setting up SonarQube & PostgreSQL through Docker Compose (Step-By-Step Guide)
 > SonarQube image used via Docker Hub : https://hub.docker.com/_/sonarqube \
-> Postgres image used via Docker Hub : https://hub.docker.com/_/postgres
+> Postgres image used via Docker Hub : https://hub.docker.com/_/postgres \
+  To install Docker-Compose commands used:
+ 1. sudo apt update
+ 2. mkdir -p ~/.docker/cli-plugins/
+ 3. sudo curl -SL https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64 \
+    -o ~/.docker/cli-plugins/docker-compose
+ 3. sudo chmod +x ~/.docker/cli-plugins/docker-compose
+ 4. Create a docker-compose file - vim docker-compose.yml \
+    *Please find the docker compose file used here in the Repository*
+ 5. docker compose up -d 
+
+      <img width="1205" height="140" alt="Docker-compose" src="https://github.com/user-attachments/assets/ec810a86-5dcb-4081-abe2-e07451abc8a4" />
+
+ 6. URL to access SonarQube Service : http://localhost:9001
+    
      
 
         
