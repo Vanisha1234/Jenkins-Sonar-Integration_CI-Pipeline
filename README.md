@@ -1,5 +1,20 @@
 # JENKINS - SONARQUBE INTEGRATION THROUGH CI PIPELINE
 
+## 📑 Table of Contents
+- [Project Overview](#project-overview)
+- [Purpose](#purpose)
+- [Tech Stack](#tech-stack)
+- [Pipeline Goal](#pipeline-goal)
+- [Key Highlights](#key-highlights)
+- [Setup Instructions](#project-setup)
+  - [Docker Setup](#setting-up-docker-on-ubuntu-virtual-machine)
+  - [Jenkins Setup](#setting-up-jenkins-through-docker-container)
+  - [SonarQube & PostgreSQL Setup](#setting-up-sonarqube--postgresql-through-docker-compose)
+- [CI Pipeline Creation](#creation-of-ci-pipeline-step-by-step)
+- [GitHub & Jenkins Integration](#integration-of-git-hub-with-jenkins-step-by-step)
+- [SonarQube Integration](#integration-of-sonarqube-with-jenkins-ci-pipeline-step-by-step)
+- [Results](#results)
+
 # [PROJECT OVERVIEW]
 > This set-up was developed from scratch for my organization to eliminate the challenges of time-consuming manual testing and overlooked issues by automating code testing and analysis, ensuring accuracy and timely results.
 
