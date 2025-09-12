@@ -7,7 +7,7 @@
 - [Pipeline Goal](#Pipeline-Goal)
 - [Key Highlights](#key-highlights)
 - [Setup Instructions](#project-setup)
-  - [Docker Setup](#setting-up-docker-on-ubuntu-virtual-machine)
+  - [Docker Setup](#Setting-up-Docker-On-Ubuntu-Virtual-Machine-(Step-By-Step))
   - [Jenkins Setup](#setting-up-jenkins-through-docker-container)
   - [SonarQube & PostgreSQL Setup](#setting-up-sonarqube--postgresql-through-docker-compose)
 - [CI Pipeline Creation](#creation-of-ci-pipeline-step-by-step)
