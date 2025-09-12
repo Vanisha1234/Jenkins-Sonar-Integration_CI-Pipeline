@@ -3,8 +3,8 @@
 ## 📑 Table of Contents
 - [Project Overview](#project-overview)
 - [Purpose](#purpose)
-- [Tech Stack](#tech-stack)
-- [Pipeline Goal](#pipeline-goal)
+- [Tech Stack](#Tech-Stack)
+- [Pipeline Goal](#Pipeline-Goal)
 - [Key Highlights](#key-highlights)
 - [Setup Instructions](#project-setup)
   - [Docker Setup](#setting-up-docker-on-ubuntu-virtual-machine)
