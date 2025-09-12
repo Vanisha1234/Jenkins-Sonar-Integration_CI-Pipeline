@@ -64,6 +64,8 @@
 
   <img width="961" height="234" alt="DockerStatus" src="https://github.com/user-attachments/assets/e6066f81-5c70-43d0-9404-408e909e8605" />
 
+
+
 # Setting up Jenkins through Docker Container (Step-By-Step)
 > Jenkins image used via Docker Hub :
 ```bash
@@ -96,6 +98,8 @@ https://hub.docker.com/r/jenkins/jenkins
   >  # Jenkins is Running!
 
   <img width="885" height="456" alt="manage-jenkins" src="https://github.com/user-attachments/assets/951feb15-70ea-45fc-a365-36481c74e369" />
+
+
 
 # Setting up SonarQube & PostgreSQL through Docker Compose (Step-By-Step)
 > SonarQube image used via Docker Hub :
@@ -143,6 +147,8 @@ https://hub.docker.com/_/postgres
 admin
 ```
 
+
+
 # Integration of Git-hub with Jenkins (Step-By-Step)
 STEP 1: Generation of personal access token on Github
  1. Github Dashboard > Your Account > Settings > Developer Settings > Personal Access Tokens > Tokens (Classic) > Generate New Token > Generate New Token (Classic) \
@@ -152,6 +158,8 @@ STEP 1: Generation of personal access token on Github
 STEP 2: Add Git generated token to Jenkins 
  1. Jenkins Dashboard > Manage Jenkins > credentials > Global > Add Credentials
     Provided Github Username, Added token as password and saved the changes
+
+
 
 # Creation of CI Pipeline (Step-By-Step)
 *Please find the Jenkinsfile file used here in the Repository*
@@ -166,6 +174,8 @@ STEP 2: Creating CI script for pipeline
 > Our Pipeline is running as expected!
 
 <img width="726" height="128" alt="Pipeline" src="https://github.com/user-attachments/assets/ee49b028-5506-4244-8ae4-fafb8935cefa" />
+
+
 
 
 # Integration of SonarQube with Jenkins CI Pipeline (Step-By-Step)
@@ -202,6 +212,8 @@ STEP 4: Configurion of SonarQube with Jenkins Pipeline Script \
 > SonarQube is displaying results!
 
 <img width="795" height="214" alt="SonarQube" src="https://github.com/user-attachments/assets/fbcffe6d-75b0-44d9-9784-34583f314589" />
+
+
 
 # Results
 🚀 Successfully set up Docker, Jenkins, and SonarQube \
