@@ -2,17 +2,17 @@
 
 ## 📑 Table of Contents
 - [Project Overview](#project-overview)
-- [Purpose](#purpose)
-- [Tech Stack](#Tech-Stack)
-- [Pipeline Goal](#Pipeline-Goal)
-- [Key Highlights](#key-highlights)
+  - [Purpose](#purpose)
+  - [Tech Stack](#Tech-Stack)
+  - [Pipeline Goal](#Pipeline-Goal)
+  - [Key Highlights](#key-highlights)
 - [Setup Instructions](#project-setup)
   - [Docker Setup](#setting-up-docker-on-ubuntu-virtual-machine-step-by-step)
-  - [Jenkins Setup](#setting-up-jenkins-through-docker-container)
-  - [SonarQube & PostgreSQL Setup](#setting-up-sonarqube--postgresql-through-docker-compose)
-- [CI Pipeline Creation](#creation-of-ci-pipeline-step-by-step)
-- [GitHub & Jenkins Integration](#integration-of-git-hub-with-jenkins-step-by-step)
-- [SonarQube Integration](#integration-of-sonarqube-with-jenkins-ci-pipeline-step-by-step)
+  - [Jenkins Setup](#setting-up-jenkins-through-docker-container-step-by-step)
+  - [SonarQube & PostgreSQL Setup](#setting-up-sonarqube--postgresql-through-docker-compose-step-by-step)
+  - [CI Pipeline Creation](#creation-of-ci-pipeline-step-by-step)
+  - [GitHub & Jenkins Integration](#integration-of-git-hub-with-jenkins-step-by-step)
+  - [SonarQube Integration](#integration-of-sonarqube-with-jenkins-ci-pipeline-step-by-step)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # [PROJECT OVERVIEW]
