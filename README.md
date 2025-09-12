@@ -17,6 +17,7 @@
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <h1 align="center">📖 Project Overview</h1>
+
 > This set-up was developed from scratch for my organization to eliminate the challenges of time-consuming manual testing and overlooked issues by automating code testing and analysis, ensuring accuracy and timely results.
 
 # Purpose:
