@@ -1,0 +1,43 @@
+services:
+# SonarQube Service
+  sonarqube:
+    image: sonarqube:latest
+    container_name: sonarqube
+    ports:
+      - "9001:9000"                                              # Map host port 9001 to container port 9000 (UI access at http://localhost:9001)
+      - "9092:9092"
+    environment:
+      SONARQUBE_JDBC_URL: jdbc:postgresql://postgres:5432/sonar  # JDBC connection string to Postgres DB
+      SONARQUBE_JDBC_USERNAME: <username>                        # Postgres username
+      SONARQUBE_JDBC_PASSWORD: <password>                        # Postgres password
+    networks:
+      - sonarset                                                 # Connect SonarQube to the custom network "sonarset"
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data                       # Persistent data
+      - sonarqube_extensions:/opt/sonarqube/extensions           # Plugins/extensions installed
+      - sonarqube_logs:/opt/sonarqube/logs                       # Log files
+    restart: always                                              # Ensuring container restarts if it crashes or system reboots
+
+# PostgreSQL Database Service
+  db:
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - "9000:9000"                                              # Expose port 9000 on host
+    environment:
+      POSTGRES_USER: <username>                                  # Create a Postgres user (used by SonarQube)
+      POSTGRES_PASSWORD: <password>                              # Password for the Postgres user
+    networks:
+      - sonarset                                                 # Connect Postgres to the same network as SonarQube
+    volumes:
+      - postgresql:/var/lib/postgresql                           # Persistent storage for database data
+    restart: always                                              # Restart policy for reliability
+
+networks:
+  sonarset:                                                      # Define a custom bridge network
+    driver: bridge                                               # Bridge allows inter-container communication
+
+volumes:
+  sonarqube_logs:                                                # Stores SonarQube logs persistently
+  sonarqube_data:                                                # Stores SonarQube data persistently
+  sonarqube_extensions:                                          # Stores SonarQube extensions/plugins persistently
