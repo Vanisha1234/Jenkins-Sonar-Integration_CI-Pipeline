@@ -24,11 +24,6 @@ pipeline {  // For Sonar-Jenkins Integration & React.js based code
                 sh "npm install ajv@latest --save"
             }
         }
-        stage('Build') {                     // Build the project (disable CI=true to avoid warnings in some React apps since code was deprecated and primary purpose was integration of Sonar and Jenkins) 
-            steps {
-                sh "CI=false npm run build"
-            }
-        }
         stage('SonarQube Analysis') {
             steps {
                 withCredentials([string(credentialsId: '<YourSonarToken>', variable: 'SONAR_TOKEN')]) {   // Use of Jenkins credentials (SonarQube token) securely
@@ -40,6 +35,18 @@ pipeline {  // For Sonar-Jenkins Integration & React.js based code
                                 -DSonar.login=${SONAR_TOKEN}'''
                     }
                 }
+            }
+        }
+        stage("Quality Gate") {
+            steps {
+              timeout(time: 5, unit: 'MINUTES') {
+                waitForQualityGate abortPipeline: true
+              }
+            }
+          }
+        stage('Build') {                     // Build the project (disable CI=true to avoid warnings in some React apps since code was deprecated and primary purpose was integration of Sonar and Jenkins) 
+            steps {
+                sh "CI=false npm run build"
             }
         }
     }
