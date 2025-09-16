@@ -200,14 +200,18 @@ STEP 4: Configurion of SonarQube with Jenkins Pipeline Script \
 > SonarQube Scanner Path : Jenkins Dashboard > Manage jenkins > Tools > SonarQube Scanner Installations > Provided the name 
 
 
-*Added the following stage to the pipeline script*
+*Added the following stages to the pipeline script*
 
 <img width="938" height="317" alt="image" src="https://github.com/user-attachments/assets/183eefb8-8f06-4e3a-b8c8-e858afe1ce1a" />
+
+<img width="609" height="171" alt="image" src="https://github.com/user-attachments/assets/38ba7f37-8a4c-4f4d-9182-c5c02e64b7a9" />
+
 
 
 > Our Pipeline is running as expected with SonarQube Integrated!
 
-<img width="726" height="128" alt="Pipeline2" src="https://github.com/user-attachments/assets/f07f5a6d-eea5-49b3-acba-f8e03e2d00a3" />
+<img width="787" height="141" alt="integrated" src="https://github.com/user-attachments/assets/debb26b9-8125-447f-be0d-9909e8ff74c5" />
+
 
 > SonarQube is displaying results!
 
